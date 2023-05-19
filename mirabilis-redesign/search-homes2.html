@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Homes - Mirabilis</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body onload="initMap();">
+    <!-- Header Start -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="web-menu">
+              <nav class="navbar navbar-expand-lg marketplace-header">
+                <a href="index.html">
+                  <img
+                    src="images/market-place-logo.svg"
+                    alt="Market Place Homes"
+                    width="200px"
+                    class="market-place"
+                /></a>
+
+                <a class="navbar-brand web-logo" href="index.html"
+                  ><img
+                    src="images/new-logo.svg"
+                    class="img-responsive"
+                    alt="Website Logo"
+                /></a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"
+                    ><i class="fa-solid fa-bars"></i>
+                  </span>
+                </button>
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="aboutus.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="search-homes.html"
+                        >Search homes</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link btn-sign-in" href="login.html"
+                        >Sign in</a
+                      >
+                    </li>
+
+                    <!-- <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Dropdown
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#"
+                        >Something else here</a
+                      >
+                    </div>
+                  </li> -->
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+    <!-- Sub header Section Start -->
+    <section class="search-home-sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sub-header-content">
+              <span>Properties</span>
+              <h1>Discover Most Suitable Property</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Tincidunt commodo
+                elementum erat tortor quis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Property Listings Section Start -->
+    <section class="search-home-property-listings">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-7 col-lg-6">
+            <div class="future-content">
+              <h3>Search properties</h3>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-6">
+            <button class="openbtn" onclick="openNav()">
+              <i class="fa fa-filter"></i> Filter
+            </button>
+            <div class="search-container">
+              <form action="" method="">
+                <input type="text" placeholder="Search.." name="search" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-6 no-padding">
+            <div class="listings-area">
+              <div id="mySidepanel" class="sidepanel">
+                <a
+                  href="javascript:void(0)"
+                  class="closebtn"
+                  onclick="closeNav()"
+                  >Close all <span><i class="fa fa-close"></i></span
+                ></a>
+                <div class="side-panel-details">
+                  <h4>Filter</h4>
+                  <form>
+                    <div class="form-group">
+                      <label>LOCATION</label>
+                      <div class="custom-field">
+                        <img
+                          src="images/location-icon.svg"
+                          alt="Location icon"
+                        />
+                        <select>
+                          <option value="0">New York, USA</option>
+                          <option value="Metro area">New York, USA</option>
+                          <option value="Metro area">New York, USA</option>
+                          <option value="Metro area">New York, USA</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>TYPE OF PLACE</label>
+                      <div class="custom-field">
+                        <div class="form-check custom-control custom-checkbox">
+                          <input
+                            class="form-check-input custom-control-input"
+                            type="checkbox"
+                            value=""
+                            id="apartment"
+                          />
+                          <label
+                            class="custom-control-label form-check-label"
+                            for="apartment"
+                            >Apartment</label
+                          >
+                        </div>
+                        <div class="form-check custom-control custom-checkbox">
+                          <input
+                            class="form-check-input custom-control-input"
+                            type="checkbox"
+                            value=""
+                            id="bungalow"
+                          />
+                          <label
+                            class="custom-control-label form-check-label"
+                            for="bungalow"
+                            >Bungalow</label
+                          >
+                        </div>
+                        <div class="form-check custom-control custom-checkbox">
+                          <input
+                            class="form-check-input custom-control-input"
+                            type="checkbox"
+                            value=""
+                            id="terrace-house"
+                          />
+                          <label
+                            class="custom-control-label form-check-label"
+                            for="terrace-house"
+                            >Terrace House</label
+                          >
+                        </div>
+                        <div class="form-check custom-control custom-checkbox">
+                          <input
+                            class="form-check-input custom-control-input"
+                            type="checkbox"
+                            value=""
+                            id="detached-house"
+                          />
+                          <label
+                            class="custom-control-label form-check-label"
+                            for="detached-house"
+                            >Detached House</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>SIZE</label>
+                      <div class="custom-field">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="sq-ft">
+                              <span class="quantity">Min</span>
+                              <input type="number" />
+                              <span>sq ft </span>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="sq-ft">
+                              <span class="quantity">Max</span>
+                              <input type="number" />
+                              <span>sq ft </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>FEATURES</label>
+
+                      <div class="custom-field">
+                        <div class="form-check custom-control custom-checkbox">
+                          <input
+                            class="form-check-input custom-control-input"
+                            type="checkbox"
+                            value=""
+                            id="Pool"
+                          />
+                          <label
+                            class="custom-control-label form-check-label"
+                            for="Pool"
+                            >Pool</label
+                          >
+                        </div>
+                        <div class="form-check custom-control custom-checkbox">
+                          <input
+                            class="form-check-input custom-control-input"
+                            type="checkbox"
+                            value=""
+                            id="Dishewasher"
+                          />
+                          <label
+                            class="custom-control-label form-check-label"
+                            for="Dishewasher"
+                            >Dishewasher</label
+                          >
+                        </div>
+                        <div class="form-check custom-control custom-checkbox">
+                          <input
+                            class="form-check-input custom-control-input"
+                            type="checkbox"
+                            value=""
+                            id="Balcony"
+                          />
+                          <label
+                            class="custom-control-label form-check-label"
+                            for="Balcony"
+                            >Terrace House</label
+                          >
+                        </div>
+                        <div class="form-check custom-control custom-checkbox">
+                          <input
+                            class="form-check-input custom-control-input"
+                            type="checkbox"
+                            value=""
+                            id="AC-Heating"
+                          />
+                          <label
+                            class="custom-control-label form-check-label"
+                            for="AC-Heating"
+                            >AC & Heating</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>PRICE RANGE</label>
+
+                      <div class="slider">
+                        <div class="progress"></div>
+                      </div>
+                      <div class="range-input">
+                        <input
+                          type="range"
+                          class="range-min"
+                          min="0"
+                          max="10000"
+                          value="2500"
+                          step="100"
+                        />
+                        <input
+                          type="range"
+                          class="range-max"
+                          min="0"
+                          max="10000"
+                          value="7500"
+                          step="100"
+                        />
+                      </div>
+                      <div class="price-input">
+                        <div class="col-6 field">
+                          <!-- <span>$</span> -->
+                          <input type="number" class="input-min" value="2500" />
+                        </div>
+                        <div class="col-6 field">
+                          <div class="checking">
+                            <!-- <span>$</span> -->
+                            <input
+                              type="number"
+                              class="input-max"
+                              value="7500"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-md-12">
+                  <a href="search-home-details.html">
+                    <div class="property-card">
+                      <div class="property-image">
+                        <img
+                          src="images/property1.jpg"
+                          class="img-responsive"
+                          alt="Property"
+                        />
+                      </div>
+                      <div class="property-specs">
+                        <div class="row">
+                          <div class="col-5">
+                            <h3 class="price"><span>$</span>425,000</h3>
+                          </div>
+                          <div class="col-7">
+                            <div class="monthly">
+                              <span>$</span>425,000<span>/month</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <h3 class="inner-title">North Bluff 72</h3>
+                            <address>909 Woodland St, Michigan, IN</address>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-4">
+                            <div class="inner-specs">
+                              <h6>
+                                <span
+                                  ><img
+                                    src="images/bedroom-icon.svg"
+                                    alt="Bedroom Icon"
+                                  />
+                                  3</span
+                                >Bedrooms
+                              </h6>
+                            </div>
+                          </div>
+                          <div class="col-4 middle-border">
+                            <div class="inner-specs">
+                              <h6>
+                                <span
+                                  ><img
+                                    src="images/bathroom-icon.svg"
+                                    alt="Bathroom Icon"
+                                  />
+                                  3</span
+                                >Bathrooms
+                              </h6>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="inner-specs">
+                              <h6>
+                                <span
+                                  ><img
+                                    src="images/sq-ft-icon.svg"
+                                    alt="Sq Ft Icon"
+                                  />
+                                  1,498</span
+                                >Square Ft
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <a href="search-home-details.html">
+                    <div class="property-card">
+                      <div class="property-image">
+                        <div class="property-badge">POPULAR</div>
+                        <img
+                          src="images/property-img.png"
+                          class="img-responsive"
+                          alt="Property"
+                        />
+                      </div>
+                      <div class="property-specs">
+                        <div class="row">
+                          <div class="col-5">
+                            <h3 class="price"><span>$</span>425,000</h3>
+                          </div>
+                          <div class="col-7">
+                            <div class="monthly">
+                              <span>$</span>425,000<span>/month</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <h3 class="inner-title">North Bluff 72</h3>
+                            <address>909 Woodland St, Michigan, IN</address>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-4">
+                            <div class="inner-specs">
+                              <h6>
+                                <span
+                                  ><img
+                                    src="images/bedroom-icon.svg"
+                                    alt="Bedroom icon"
+                                  />
+                                  2</span
+                                >Bedrooms
+                              </h6>
+                            </div>
+                          </div>
+                          <div class="col-4 middle-border">
+                            <div class="inner-specs">
+                              <h6>
+                                <span
+                                  ><img src="images/bathroom-icon.svg" />
+                                  2</span
+                                >Bathrooms
+                              </h6>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="inner-specs">
+                              <h6>
+                                <span
+                                  ><img src="images/sq-ft-icon.svg" />
+                                  1,000</span
+                                >Square Ft
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-md-12">
+                  <a href="search-home-details.html">
+                    <div class="property-card">
+                      <div class="property-image">
+                        <img
+                          src="images/property2.jpg"
+                          class="img-responsive"
+                        />
+                      </div>
+                      <div class="property-specs">
+                        <div class="row">
+                          <div class="col-5">
+                            <h3 class="price"><span>$</span>300,000</h3>
+                          </div>
+                          <div class="col-7">
+                            <div class="monthly">
+                              <span>$</span>4500<span>/month</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <h3 class="inner-title">Faulkner Ave</h3>
+                            <address>909 Woodland St, Michigan, IN</address>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-4">
+                            <div class="inner-specs">
+                              <h6>
+                                <span
+                                  ><img src="images/bedroom-icon.svg" /> 4</span
+                                >Bedrooms
+                              </h6>
+                            </div>
+                          </div>
+                          <div class="col-4 middle-border">
+                            <div class="inner-specs">
+                              <h6>
+                                <span
+                                  ><img src="images/bathroom-icon.svg" />
+                                  3</span
+                                >Bathrooms
+                              </h6>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="inner-specs">
+                              <h6>
+                                <span
+                                  ><img src="images/sq-ft-icon.svg" />
+                                  2,000</span
+                                >Square Ft
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <div class="property-card">
+                    <div class="property-image">
+                      <div class="property-badge">POPULAR</div>
+                      <img src="images/property3.jpg" class="img-responsive" />
+                    </div>
+                    <div class="property-specs">
+                      <div class="row">
+                        <div class="col-5">
+                          <h3 class="price"><span>$</span>425,000</h3>
+                        </div>
+                        <div class="col-7">
+                          <div class="monthly">
+                            <span>$</span>425,000<span>/month</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <h3 class="inner-title">St. Crystal</h3>
+                          <address>909 Woodland St, Michigan, IN</address>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="inner-specs">
+                            <h6>
+                              <span
+                                ><img src="images/bedroom-icon.svg" /> 3</span
+                              >Bedrooms
+                            </h6>
+                          </div>
+                        </div>
+                        <div class="col-4 middle-border">
+                          <div class="inner-specs">
+                            <h6>
+                              <span
+                                ><img src="images/bathroom-icon.svg" /> 3</span
+                              >Bathrooms
+                            </h6>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="inner-specs">
+                            <h6>
+                              <span
+                                ><img src="images/sq-ft-icon.svg" /> 1,498</span
+                              >Square Ft
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-md-12">
+                  <div class="property-card">
+                    <div class="property-image">
+                      <img src="images/property1.jpg" class="img-responsive" />
+                    </div>
+                    <div class="property-specs">
+                      <div class="row">
+                        <div class="col-5">
+                          <h3 class="price"><span>$</span>425,000</h3>
+                        </div>
+                        <div class="col-7">
+                          <div class="monthly">
+                            <span>$</span>425,000<span>/month</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <h3 class="inner-title">North Bluff 72</h3>
+                          <address>909 Woodland St, Michigan, IN</address>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="inner-specs">
+                            <h6>
+                              <span
+                                ><img src="images/bedroom-icon.svg" /> 3</span
+                              >Bedrooms
+                            </h6>
+                          </div>
+                        </div>
+                        <div class="col-4 middle-border">
+                          <div class="inner-specs">
+                            <h6>
+                              <span
+                                ><img src="images/bathroom-icon.svg" /> 3</span
+                              >Bathrooms
+                            </h6>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="inner-specs">
+                            <h6>
+                              <span
+                                ><img src="images/sq-ft-icon.svg" /> 1,498</span
+                              >Square Ft
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <div class="property-card">
+                    <div class="property-image">
+                      <div class="property-badge">POPULAR</div>
+                      <img
+                        src="images/property-img.png"
+                        class="img-responsive"
+                      />
+                    </div>
+                    <div class="property-specs">
+                      <div class="row">
+                        <div class="col-5">
+                          <h3 class="price"><span>$</span>425,000</h3>
+                        </div>
+                        <div class="col-7">
+                          <div class="monthly">
+                            <span>$</span>425,000<span>/month</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <h3 class="inner-title">North Bluff 72</h3>
+                          <address>909 Woodland St, Michigan, IN</address>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="inner-specs">
+                            <h6>
+                              <span
+                                ><img src="images/bedroom-icon.svg" /> 2</span
+                              >Bedrooms
+                            </h6>
+                          </div>
+                        </div>
+                        <div class="col-4 middle-border">
+                          <div class="inner-specs">
+                            <h6>
+                              <span
+                                ><img src="images/bathroom-icon.svg" /> 2</span
+                              >Bathrooms
+                            </h6>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="inner-specs">
+                            <h6>
+                              <span
+                                ><img src="images/sq-ft-icon.svg" /> 1,000</span
+                              >Square Ft
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 no-padding">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Property Listings Section End -->
+    <!-- Sub header Section End -->
+    <!-- Newsletter Section Start -->
+    <section
+      class="subscribe-newsletter contact"
+      style="background-color: #d9d9d9"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="subscribe-heading">
+              <h3 style="color: #000000">
+                Find your dream house by applying to our program
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="subscribe-heading-btn">
+              <a href="#">Apply now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Section End -->
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <ul class="footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="aboutus.html">About us</a>
+              </li>
+              <li>
+                <a href="blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="search-homes.html">Search</a>
+              </li>
+              <li>
+                <a href="faq.html">FAQ</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h4 class="link-title">Find Homes</h4>
+            <ul class="find-home-nav">
+              <li>
+                <a href="#">Austin</a>
+              </li>
+              <li>
+                <a href="#">Houston</a>
+              </li>
+              <li>
+                <a href="#">Dallas/Fort Worth</a>
+              </li>
+              <li>
+                <a href="#">San Antonio</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h4 class="link-title">My Account</h4>
+            <ul class="find-home-nav">
+              <li>
+                <a href="#">Sign In</a>
+              </li>
+              <li>
+                <a href="#">Wish List</a>
+              </li>
+              <li>
+                <a href="#">My account</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/mirabilis.homes.us/"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/mirabilis.homes/"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/mirabilis-homes/about/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+            <div class="contact-details">
+              <p>801 Barton Springs Rd, Suite 09-116, Austin, Texas, 78704</p>
+              <a href="tel++19124937830">+1 912-493-7830</a>
+              <a href="mailto:help@mirabilishomes.com"
+                >help@mirabilishomes.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+            <div class="bottom-links">
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Claim</a>
+              <a href="#">Privacy & Policy</a>
+            </div>
+            <div class="copyright">
+              <p>All Rights Reserved &copy; Mirabilis Homes 2022</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="footer-logo">
+              <a href="index.html"
+                ><img src="images/footer-logo.svg" class="img-responsive"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright mob">
+          <p>All Rights Reserved &copy; Mirabilis Homes 2022</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Sticky Button Section Start -->
+    <section class="btn-sticky">
+      <a href="login.html">Get pre-qualified</a>
+    </section>
+    <!-- Sticky Button Section Start -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+      async
+      defer
+    ></script>
+    <script>
+      const rangeInput = document.querySelectorAll(".range-input input"),
+        priceInput = document.querySelectorAll(".price-input input"),
+        range = document.querySelector(".slider .progress");
+      let priceGap = 1000;
+
+      priceInput.forEach((input) => {
+        input.addEventListener("input", (e) => {
+          let minPrice = parseInt(priceInput[0].value),
+            maxPrice = parseInt(priceInput[1].value);
+
+          if (
+            maxPrice - minPrice >= priceGap &&
+            maxPrice <= rangeInput[1].max
+          ) {
+            if (e.target.className === "input-min") {
+              rangeInput[0].value = minPrice;
+              range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+            } else {
+              rangeInput[1].value = maxPrice;
+              range.style.right =
+                100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+            }
+          }
+        });
+      });
+
+      rangeInput.forEach((input) => {
+        input.addEventListener("input", (e) => {
+          let minVal = parseInt(rangeInput[0].value),
+            maxVal = parseInt(rangeInput[1].value);
+
+          if (maxVal - minVal < priceGap) {
+            if (e.target.className === "range-min") {
+              rangeInput[0].value = maxVal - priceGap;
+            } else {
+              rangeInput[1].value = minVal + priceGap;
+            }
+          } else {
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+          }
+        });
+      });
+    </script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "400px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+    <script>
+      // Create global variables for map, markers, etc
+      var map;
+      var Data = [];
+      var viewportMarkers = [];
+      var infoWindow;
+      var handle1, handle2;
+      var markerCount = 0;
+
+      // Function to initialize the map and set values
+      function initMap() {
+        var lat = 29.749907;
+        var lng = -95.358421;
+        var iniZoom = 9;
+        var myLatLng = new google.maps.LatLng(lat, lng);
+
+        var options = {
+          zoom: iniZoom,
+          center: myLatLng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        };
+
+        map = new google.maps.Map(document.getElementById("map"), options);
+
+        // Add event listeners for when the map has changed: drag, zoom in/out or page refreshed.
+        google.maps.event.addListener(map, "dragend", function () {
+          showMarkersInViewport();
+        });
+        google.maps.event.addListener(map, "idle", function () {
+          showMarkersInViewport();
+        });
+      }
+
+      // Create a function to add markers to the map.
+      function showMarkersInViewport() {
+        if (viewportMarkers != null) {
+          for (i = 0; i < viewportMarkers.length; i++) {
+            viewportMarkers[i].setMap(null);
+          }
+          viewportMarkers = [];
+
+          // close any open infoWindows when the map is clicked
+          google.maps.event.addListener(map, "click", function () {
+            infoWindow.close();
+          });
+
+          // Set the results box row color back to normal when the map is clicked
+          google.maps.event.addListener(
+            map,
+            "click",
+            function selectDataRow(code) {
+              var table = document.getElementById("tbl");
+              for (var i = 1, row; (row = table.rows[i]); i++) {
+                row.style.backgroundColor = "#ffffff";
+              }
+            }
+          );
+        }
+
+        // Create a table to hold the info of the markers on the map.
+        var divTable =
+          '<table id="tbl" width="100%" bgcolor="#ffffff" border="all"><tr><td width="10%" style="color:#000000; background-color:#ffffff; font-family: Trebuchet MS; font-size:11pt; color: #000000; font-weight: bold">CODE</td>' +
+          '<td width="40%" style="color:#000000; background-color:#ffffff; font-family: Trebuchet MS; font-size:11pt; color: #000000; font-weight: bold">Airport Name</td>' +
+          '<td width="50%" style="color:#000000; background-color:#ffffff; font-family: Trebuchet MS; font-size:11pt; color: #000000; font-weight: bold">Location</td></tr>';
+        var divText =
+          '<span style="background-color:#000000;font-family: Trebuchet MS; font-size:12pt; color: red;"><b>List of airports in range</b><br/><br/></span>';
+
+        // call the getAirports() function to retrieve the locations (airports) in the current viewport.
+        var airportsInViewport = getAirports(map.getBounds());
+        if (airportsInViewport == null) return;
+        // Next, iterate through the elements in the airports array for each airport in the viewport:
+        //   1. Create a marker and place it on the map
+        //   2. Add an event listener to the click event of the marker to display an InfoWindow with data about the selected airport
+        //   3. Add a new row to the table beside the map that summarizes the airports on the map
+        for (i = 0; i < airportsInViewport.length; i++) {
+          // create a new marker
+          var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(
+              airportsInViewport[i].Location.Latitude,
+              airportsInViewport[i].Location.Longitude
+            ),
+            icon: airportsInViewport[i].icon,
+            title:
+              "AIRPORT: " +
+              airportsInViewport[i].Name +
+              " in " +
+              airportsInViewport[i].City +
+              ", " +
+              airportsInViewport[i].Country,
+          });
+          // "marker.objInfo sets its objInfo property to the airport's description. This object will populate the InfoWindow with the airport's data
+          marker.objInfo =
+            airportsInViewport[i].Name +
+            "<br/>" +
+            airportsInViewport[i].Code +
+            "<br/>" +
+            airportsInViewport[i].City +
+            "/Month";
+
+          // add the click event's listener for each marker to open the info-Window
+          (function (index, selectedMarker) {
+            google.maps.event.addListener(selectedMarker, "click", function () {
+              if (infoWindow != null) infoWindow.setMap(null);
+              infoWindow = new google.maps.InfoWindow();
+              infoWindow.setContent(selectedMarker.objInfo);
+              infoWindow.open(map, selectedMarker);
+              selectDataRow(airportsInViewport[index].Code);
+            });
+          })(i, marker);
+
+          // place the marker on the map
+          marker.setMap(map);
+          // add the marker to the viewportMarkers array
+          viewportMarkers.push(marker);
+          // Create a new row entry for the table corresponding to the current airport
+          var currentIndex = viewportMarkers.length - 1;
+          // The linkText variable holds the airport name and the text of the hyperlink (column Airport)
+          var linkText =
+            "AIRPORT: " +
+            airportsInViewport[i].Name +
+            "&nbsp;&nbsp;(" +
+            airportsInViewport[i].Code +
+            ")" +
+            "<br/>";
+          // The linkInfo variable holds the remaining columns of the row
+          var linkInfo =
+            "CITY: " +
+            airportsInViewport[i].City +
+            "<br/>COUNTRY: " +
+            airportsInViewport[i].Country;
+          // Add the hyperlink to bounce the appropriate marker and open its infoWindow
+          divText +=
+            '<a href="javascript:highlightMarker(' +
+            currentIndex +
+            ')">' +
+            "<b>" +
+            linkText +
+            "</b>" +
+            "</a>" +
+            linkInfo +
+            "<br/><br/>";
+          // Finally, add the <tr> element for the row
+          divTable +=
+            '<tr><td  id="' +
+            airportsInViewport[i].Code +
+            '"; style="font-family: Source Sans Pro;font-weight: 700;font-size: 25px;color: #071C1F;">' +
+            '<a style="color:#000000" href="javascript:zoomMarker(' +
+            currentIndex +
+            ')">' +
+            airportsInViewport[i].Code +
+            '</td><td style="font-family: Source Sans Pro;font-weight: 600;font-size: 14px;color: #5C727D;">' +
+            '<a style="color: #5C727D;" href="javascript:highlightMarker(' +
+            currentIndex +
+            ')">' +
+            airportsInViewport[i].Name +
+            '</a></td><td style="font-family: Source Sans Pro;font-weight: 700;font-size: 25px;color: #071C1F;">' +
+            '<a style="color:#000000" href="javascript:highlightMarker(' +
+            currentIndex +
+            ')">' +
+            airportsInViewport[i].City +
+            "<br/>" +
+            airportsInViewport[i].State +
+            "</td></tr>";
+          markerCount++;
+        }
+        divTable += "</table>";
+        document.getElementById("dataTable").innerHTML = divTable;
+      }
+
+      // Function to change the row background color when the corresponding marker is clicked.
+      function selectDataRow(code) {
+        var table = document.getElementById("tbl");
+        for (var i = 1, row; (row = table.rows[i]); i++) {
+          row.style.backgroundColor = "#ffffff";
+        }
+        document.getElementById(code).parentNode.style.backgroundColor =
+          "#66CD00"; // sets the row color to red.
+      }
+
+      // The following function returns all airports in the current viewport in the selected array
+      // The "a" argument is a LatLngBounds object with the viewport's bounds. It doesn't have to be "a", you can
+      // call it anything. Example "abc", "xyz", etc. you just can't use numbers like "1" or "123".
+      function getAirports(a) {
+        if (a == null || a == undefined) return null;
+        var selected = [];
+        for (i = 0; i < airports.length; i++) {
+          if (
+            a.contains(
+              new google.maps.LatLng(
+                airports[i].Location.Latitude,
+                airports[i].Location.Longitude
+              )
+            )
+          ) {
+            selected.push(airports[i]);
+          }
+        }
+        return selected;
+      }
+
+      //  The highlightMarker() function opens the InfoWindow object that corresponds
+      //  to the marker in the viewportMarkers array
+
+      function highlightMarker(index) {
+        if (infoWindow != null) infoWindow.setMap(null);
+        infoWindow = new google.maps.InfoWindow();
+        infoWindow.setContent(viewportMarkers[index].objInfo);
+        infoWindow.open(map, viewportMarkers[index]);
+
+        // Bounce the marker for two seconds when the corresonding link is clicked in the result box.
+        viewportMarkers[index].setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(function () {
+          viewportMarkers[index].setAnimation(null);
+        }, 1250); // This sets the time for the bounce. You can make it longer or shorter.
+      }
+      // Pan the map to center the marker when the "CODE" link is clicked in the results box.
+      function zoomMarker(index) {
+        map.panTo(viewportMarkers[index].getPosition());
+      }
+
+      // Create an array of markers
+      // This can be moved to a seperate js page for simplicity.
+      var airports = [
+        {
+          Name: "North Bluff 72",
+          Code: "909 Woodland St, Michigan, IN",
+          City: "425,000",
+          Location: { Latitude: 29.749907, Longitude: -95.358421 },
+          icon: "https://dipa-app.com/mirabilis-redesign/images/get-prequalified.svg",
+        },
+
+        {
+          Name: "Faulkner Ave",
+          Code: "909 Woodland St, Michigan, IN",
+          City: "425,000",
+          Location: { Latitude: 29.649907, Longitude: -95.158421 },
+          icon: "https://dipa-app.com/mirabilis-redesign/images/get-prequalified.svg",
+        },
+      ];
+    </script>
+  </body>
+</html>

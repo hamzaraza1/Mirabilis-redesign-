@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Homes - Mirabilis</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+  <!-- Header Start -->
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="web-menu">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand web-logo" href="index.html"
+              ><img
+                src="images/new-logo.svg"
+                class="img-responsive"
+                alt="Website Logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i> </span>
+            </button>
+            <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="search-homes.html">Search homes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn-sign-in" href="login.html">Sign in</a>
+                  </li>
+ 
+                  <!-- <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Dropdown
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#"
+                        >Something else here</a
+                      >
+                    </div>
+                  </li> -->
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+    <!-- Sub header Section Start -->
+    <section class="search-home-sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="sub-header-content">
+              <span>Properties</span>
+              <h1>Discover Most Suitable Property</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Tincidunt commodo
+                elementum erat tortor quis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Start -->
+    <section class="search-home-login-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="apply-homes">
+                        <h4>Apply to INTRO program</h4>
+                        <p>Apply directly to the INTRO program if you’ve already found your dream home.</p>
+                    <a href="#" class="apply-home-btn">Apply now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7 rightsearch">
+                    <div class="account-create">
+                        <form id="frmsearchbox" action="" class="ltn__form-box contact-form-box" method="get">
+                            <div class="form-group mb-0">
+                                <h4>Search homes by metro area</h4>
+                                <select class="form-select form-control selectpicker w-100" aria-label="Default select example" name="location" >
+                                  <option value="">Select a metro area</option>
+                                  <option value="Austin">Austin</option>
+                                  <option value="Houston">Houston</option>
+                                  <option value="Dallas/Fort Worth">Dallas/Fort Worth</option>
+                                  <option value="San Antonio">San Antonio</option>                 
+                                </select>
+                            </div>
+                            <div class="btn-wrapper mt-0">
+                            
+                                <a type="button" class="btn btn-primary"  data-bs-form="frmsearchbox" id="btnviewhomes"  data-bs-toggle="modal"
+                                data-toggle="modal" href="#continue_confirmation">
+                                  Search homes
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section End -->
+    <!-- Newsletter Section Start -->
+    <section class="subscribe-newsletter">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="subscribe-heading">
+                <h3>Subscribe to our newsletter.</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="subscribe-field">
+                <form method="" action="">
+                <div class="input-group mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    required="required"
+                  />
+                  <div class="input-group-prepend">
+                    <button type="submit" class="btn btn-outline-primary">
+                      <img src="images/send-icon.svg" alt="Send-icon" />
+                    </button>
+                  </div>
+                </div>
+                <form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Newsletter Section End -->
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <ul class="footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="aboutus.html">About us</a>
+              </li>
+              <li>
+                <a href="blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="search-homes.html">Search</a>
+              </li>
+              <li>
+                <a href="faq.html">FAQ</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h4 class="link-title">Find Homes</h4>
+            <ul class="find-home-nav">
+              <li>
+                <a href="#">Austin</a>
+              </li>
+              <li>
+                <a href="#">Houston</a>
+              </li>
+              <li>
+                <a href="#">Dallas/Fort Worth</a>
+              </li>
+              <li>
+                <a href="#">San Antonio</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h4 class="link-title">My Account</h4>
+            <ul class="find-home-nav">
+              <li>
+                <a href="#">Sign In</a>
+              </li>
+              <li>
+                <a href="#">Wish List</a>
+              </li>
+              <li>
+                <a href="#">My account</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/mirabilis.homes.us/"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/mirabilis.homes/"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/mirabilis-homes/about/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+            <div class="contact-details">
+              <p>801 Barton Springs Rd, Suite 09-116, Austin, Texas, 78704</p>
+              <a href="tel++19124937830">+1 912-493-7830</a>
+              <a href="mailto:help@mirabilishomes.com"
+                >help@mirabilishomes.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+            <div class="bottom-links">
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Claim</a>
+              <a href="#">Privacy & Policy</a>
+            </div>
+            <div class="copyright">
+              <p>All Rights Reserved &copy; Mirabilis Homes 2022</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="footer-logo">
+              <a href="index.html"
+                ><img src="images/footer-logo.svg" class="img-responsive"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright mob">
+          <p>All Rights Reserved &copy; Mirabilis Homes 2022</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Sticky Button Section Start -->
+    <section class="btn-sticky">
+      <a href="login.html">Get pre-qualified</a>
+    </section>
+    <!-- Sticky Button Section Start -->
+    <!-- Modal -->
+<div class="modal fade search-home-modal" id="continue_confirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Continue to a member broker website</h5>
+          <button type="button" class="close btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>By selectin continue, you will be viewing content provided by Mirabilis Homes Member Broke who may have privacy  practices and offer a level of security different than ours. Mirabilis Homes is not responsible for and does not endorse, guarantee or monitor content, availability, viewpoints, products or services that are offered within the content pages of our Member Brokers.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="search-homes2.html" type="button" class="btn btn-primary">Continue</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back to Mirabilis</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script
+       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+       crossorigin="anonymous"
+     ></script>
+  <script>
+        $(document).on("click", "#btnviewhomes", function(ev) {
+        if ($("select[name='location']").val() == "") {
+            alert("Please choose the location before proceeding");
+            return false;
+        }
+        $("#btncontinue").attr("data-bs-form", $(this).data("form"));
+        $("#continue_confirmation").modal("show");        
+        //$("#btnviewhomes").attr("type", "submit");
+        //return false;
+    });
+  </script>
+</body>
+</html>
